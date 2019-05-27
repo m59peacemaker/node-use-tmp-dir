@@ -1,0 +1,31 @@
+{
+  "name": "@m59/use-tmp-dir",
+  "version": "0.1.0",
+  "description": "Takes a function and calls it with a path to a temporary directory.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.spec.js"
+  },
+  "keywords": [
+    "tmp",
+    "dir",
+    "temporary",
+    "directory",
+    "path",
+    "cleanup",
+    "functional"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m59peacemaker/node-use-tmp-dir"
+  },
+  "author": "Johnny Hauser <johnnyhauser@gmail.com>",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "zora": "^3.0.1"
+  },
+  "dependencies": {
+    "@m59/remove-directory": "^0.1.0",
+    "ulid": "^2.3.0"
+  }
+}
