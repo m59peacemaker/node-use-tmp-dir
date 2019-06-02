@@ -3,7 +3,6 @@ const path = require('path')
 const { mkdir }  = require('fs')
 const { promisify } = require('util')
 const mkdirAsync = promisify(mkdir)
-// const mkdirAsync = fs.promises.mkdir
 const { ulid } = require('ulid')
 const removeDirectory = require('@m59/remove-directory')
 
