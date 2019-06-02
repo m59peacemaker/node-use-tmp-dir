@@ -1,6 +1,6 @@
 {
   "name": "@m59/use-tmp-dir",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Takes a function and calls it with a path to a temporary directory.",
   "main": "index.js",
   "scripts": {
