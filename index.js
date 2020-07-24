@@ -4,7 +4,7 @@ const { sep } = require('path')
 
 const tmpDirs = new Map()
 
-const handleExitSignal = () => {
+const handleExitSignal = signal => {
 	process.off('SIGTERM', handleExitSignal)
 	process.off('SIGINT', handleExitSignal)
 	for (const [ id, tmpDir ] of tmpDirs) {
