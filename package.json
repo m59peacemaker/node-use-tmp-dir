@@ -1,7 +1,9 @@
 {
   "name": "@m59/use-tmp-dir",
-  "version": "1.0.2",
-  "engines" : { "node" : ">=14" },
+  "version": "2.0.0",
+  "engines": {
+    "node": ">=14"
+  },
   "description": "Takes a function and calls it with a path to a temporary directory.",
   "main": "index.js",
   "scripts": {
