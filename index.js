@@ -1,4 +1,4 @@
-const { promises: { mkdtemp, rmdir }, rmdirSync }  = require('fs')
+const { promises: { mkdtemp, rm }, rmSync }  = require('fs')
 const { tmpdir: osTmpDir } = require('os')
 const { sep } = require('path')
 
@@ -9,7 +9,7 @@ const handleExitSignal = signal => {
 	process.off('SIGINT', handleExitSignal)
 	for (const [ id, tmpDir ] of tmpDirs) {
 		tmpDirs.delete(id)
-		rmdirSync(tmpDir, { recursive: true })
+		rmSync(tmpDir, { recursive: true })
 	}
 	// NOTE: you must do this to forward the signal on, otherwise this listener intercepts the signal and stops the process from exiting
 	process.kill(process.pid, signal)
@@ -26,6 +26,6 @@ module.exports = async useFn => {
 		return await useFn(tmpDir)
 	} finally {
 		tmpDirs.delete(id)
-		await rmdir(tmpDir, { recursive: true })
+		await rm(tmpDir, { recursive: true })
 	}
 }
